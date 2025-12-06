@@ -34,7 +34,7 @@ function App() {
           {
             id: 'welcome',
             role: 'assistant',
-            content: 'Hello! I am your Eloquent Chit Chat assistant 🤖',
+            content: 'Hello! How can I assist you today?',
           },
         ]}
         theme={theme}
