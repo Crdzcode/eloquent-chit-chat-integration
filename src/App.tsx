@@ -1,5 +1,5 @@
 // src/App.tsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // nome vindo do "name" do package.json da lib
 import { EloquentChitChat } from '@crdzcode/eloquent-chit-chat';
