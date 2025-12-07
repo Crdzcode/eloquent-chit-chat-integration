@@ -1,7 +1,7 @@
 # Eloquent Chit Chat Integration Demo
 
 This project serves as a demonstration environment for integrating and testing the Eloquent Chit Chat widget.  
-It provides a minimal yet realistic setup that shows how the chat component behaves when embedded in a frontend application.
+It provides a minimal setup that shows how the chat component behaves when embedded in a frontend application.
 
 ## Purpose
 
@@ -10,7 +10,6 @@ The integration demo showcases:
 - How to install and import the Eloquent Chit Chat package
 - How to configure the llmClient used for message generation
 - How to manage themes (light or dark)
-- How the widget behaves in user-facing scenarios
 - Communication with the Express backend for LLM responses
 
 ## Live Demo
@@ -23,21 +22,21 @@ https://eloquent-chit-chat-integration.vercel.app/
 
 Install dependencies:
 
-npm install
+`npm install`
 
 Run the development environment:
 
-npm run dev
+`npm run dev`
 
 Build for production:
 
-npm run build
+`npm run build`
 
 ## Configuration
 
 The integration project expects an environment variable defining the backend endpoint:
 
-VITE_CHAT_API_URL=https://eloquent-chit-chat-express.onrender.com
+`VITE_CHAT_API_URL=https://eloquent-chit-chat-express.onrender.com`
 
 This variable controls where the widget sends LLM messages.
 
@@ -45,6 +44,7 @@ This variable controls where the widget sends LLM messages.
 
 Below is the implementation used by the demo environment:
 
+```
 import type { ChatMessage } from '@crdzcode/eloquent-chit-chat';
 
 const API_BASE_URL =
@@ -77,18 +77,30 @@ export const llmClient = async ({
   const data: { reply: string } = await res.json();
   return data.reply;
 };
+```
 
 ## Project Structure
 
+```
 /src  
   /assets  
   App.css  
   App.tsx
   index.css
   llmClient.ts
-  main.tsx  
-index.html  
-vite.config.ts  
+  main.tsx
+.env
+.gitignore
+eslint.config.js
+index.html
+package-lock.json
+package.json
+README.md
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+```
 
 ## Notes
 
