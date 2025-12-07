@@ -16,7 +16,7 @@ function App() {
   return (
     <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif', height: '200vh', overflowY: 'auto' }}>
       <h1>Eloquent Chit Chat Demo</h1>
-      <p>Testing the embeddable chat widget from the local .tgz package.</p>
+      <p>Testing the embeddable chat widget from the lib published on NPM.</p>
 
       <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} style={{marginRight: 16, outline: 'none'}}>
         Toggle Theme
@@ -26,7 +26,6 @@ function App() {
         Toggle Status
       </button>
 
-      {/* O widget fica flutuante, então você só precisa renderizar ele uma vez */}
       <EloquentChitChat
         title="Chit Chat"
         llmClient={llmClient}
