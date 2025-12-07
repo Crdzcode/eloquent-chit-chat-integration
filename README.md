@@ -44,7 +44,7 @@ This variable controls where the widget sends LLM messages.
 
 Below is the implementation used by the demo environment:
 
-```
+```typescript
 import type { ChatMessage } from '@crdzcode/eloquent-chit-chat';
 
 const API_BASE_URL =
